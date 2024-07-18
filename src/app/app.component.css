@@ -1,0 +1,18 @@
+.f2 {
+    background-color:darkgray;
+  }
+  
+  .f2:hover {
+    background-color: whitesmoke;
+  }
+
+  .f1{
+    background-color:blueviolet;
+  }
+  .f1:hover{
+    background-color:black;
+  }
+  .custom-search-input {
+    width: 400px; /* Change this value to your desired width */
+  }
+  
