@@ -4,11 +4,39 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomecomponentComponent } from './homecomponent/homecomponent.component';
+import { FooterComponent } from './footer/footer.component';
+import { AllproductsComponent } from './allproducts/allproducts.component';
+import { BestsellersComponent } from './bestsellers/bestsellers.component';
+import { ComputersComponent } from './computers/computers.component';
+import { DronesComponent } from './drones/drones.component';
+import { HeadphonesComponent } from './headphones/headphones.component';
+import { HomepageComponent } from './homepage/homepage.component';
+import { HomepagesaleComponent } from './homepagesale/homepagesale.component';
+import { MobileComponent } from './mobile/mobile.component';
+import { SaleComponent } from './sale/sale.component';
+import { SpeakersComponent } from './speakers/speakers.component';
+import { TabletsComponent } from './tablets/tablets.component';
+import { TvhomeComponent } from './tvhome/tvhome.component';
+import { WearableComponent } from './wearable/wearable.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomecomponentComponent
+    HomecomponentComponent,
+    FooterComponent,
+    AllproductsComponent,
+    BestsellersComponent,
+    ComputersComponent,
+    DronesComponent,
+    HeadphonesComponent,
+    HomepageComponent,
+    HomepagesaleComponent,
+    MobileComponent,
+    SaleComponent,
+    SpeakersComponent,
+    TabletsComponent,
+    TvhomeComponent,
+    WearableComponent
   ],
   imports: [
     BrowserModule,

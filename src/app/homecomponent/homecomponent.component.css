@@ -6,7 +6,7 @@
     background-size: cover;
     background-position: center;
     width: 100%;
-    height: 500px; /* Adjust the height as needed */
+    height: 500px; 
 }
 .card-custom {
   width: 10rem;
@@ -46,4 +46,60 @@
   width: 100%;
 }
 
+.col {
+  border-right: 1px solid #6c757d; 
+}
+.col:last-child {
+  border-right: none; 
+}
+.custom-height {
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.col {
+  border-right: 1px solid #6c757d; 
+}
+.col:last-child {
+  border-right: none; 
+}
+html, body {
+  height: 100%;
+}
 
+.row {
+  height: 100%;
+}
+
+.col-sm-4 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* min-height: 100vh; */
+}
+.chat-box {
+  height: 400px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.messages {
+  flex-grow: 1;
+  margin-bottom: 10px;
+}
+.messages .message {
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+.messages .message.sent {
+  background-color: #d1e7dd;
+  align-self: flex-end;
+}
+.messages .message.received {
+  background-color: #f8d7da;
+  align-self: flex-start;
+}
