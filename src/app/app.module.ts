@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { ReactiveFormsModule } from '@angular/forms';
+import { AuthService } from './auth.service';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomecomponentComponent } from './homecomponent/homecomponent.component';
@@ -18,6 +19,10 @@ import { SpeakersComponent } from './speakers/speakers.component';
 import { TabletsComponent } from './tablets/tablets.component';
 import { TvhomeComponent } from './tvhome/tvhome.component';
 import { WearableComponent } from './wearable/wearable.component';
+import {HttpClientModule} from '@angular/common/http';
+import { SidenavComponent } from './sidenav/sidenav.component';
+
+
 
 @NgModule({
   declarations: [
@@ -36,13 +41,17 @@ import { WearableComponent } from './wearable/wearable.component';
     SpeakersComponent,
     TabletsComponent,
     TvhomeComponent,
-    WearableComponent
+    WearableComponent,
+    SidenavComponent,
+
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

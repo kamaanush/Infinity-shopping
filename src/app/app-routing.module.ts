@@ -16,9 +16,10 @@ import { TvhomeComponent } from './tvhome/tvhome.component';
 import { WearableComponent } from './wearable/wearable.component';
 
 const routes: Routes = [
+  // { path: '', redirectTo: '/home-component', pathMatch: 'full' } ,
  { path: 'home-component', component: HomecomponentComponent },
  { path: 'all-products', component: AllproductsComponent },
- { path: '', redirectTo: '/all-products', pathMatch: 'full' } ,
+//  { path: '', redirectTo: '/all-products', pathMatch: 'full' } ,
  { path: 'best-sellers', component:BestsellersComponent },
  {path: 'computers', component:ComputersComponent },
  {path: 'drones', component: DronesComponent},
@@ -30,7 +31,8 @@ const routes: Routes = [
  {path: 'speakers', component: SpeakersComponent},
  {path:'tablets' , component: TabletsComponent},
  {path:'tv-home' , component: TvhomeComponent},
- {path:'wearable', component: WearableComponent}
+ {path:'wearable', component: WearableComponent},
+ 
 
 
 ];
