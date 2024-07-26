@@ -1,1 +1,131 @@
-<p>allproducts works!</p>
+<!-- <div *ngIf="loading">Loading...</div>
+<div *ngIf="error">{{ error }}</div>
+<div *ngIf="!loading && !error">
+  <h1>All Products</h1>
+  <div class="card-group">
+    <div class="card" *ngFor="let product of products | slice:0:3">
+      <img [src]="product.images[0]" class="card-img-top" alt="{{ product.title }}">
+      <div class="card-body">
+        <h5 class="card-title">{{ product.title }}</h5>
+        <p class="card-text">{{ product.description }}</p>
+        <p class="card-text">Price: ${{ product.price }}</p>
+        <p class="card-text">Category: {{ product.category }}</p>
+        <p class="card-text">Stock: {{ product.stock }}</p>
+        <p class="card-text">Rating: {{ product.rating }}</p>
+        <p class="card-text"><small class="text-muted">Last updated {{ product.meta.updatedAt | date:'short' }}</small></p>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<!-- the above code is for 3 products to display using the slice -->
+<div *ngIf="loading">Loading...</div>
+<div *ngIf="error">{{ error }}</div>
+<div *ngIf="!loading && !error">
+  <h1>All Products</h1>
+  <div class="mb-3">
+    <div class="col-3">
+    <input type="text" class="form-control" [(ngModel)]="searchQuery" (input)="onSearchChange(searchQuery)" placeholder="Search products...">
+</div>
+  </div>
+  <button class="btn btn-primary mb-4" (click)="openModal()">Add Product</button>
+  <div class="card-deck">
+    <div class="row">
+      <div class="col-sm-4 mb-4" *ngFor="let product of filteredProducts">
+        <div class="card h-100 d-flex flex-column">
+          <img [src]="product.images[0]" class="card-img-top" alt="{{ product.title }}">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">{{ product.title }}</h5>
+            <p class="card-text">{{ product.description }}</p>
+            <p class="card-text">Price: ${{ product.price }}</p>
+            <p class="card-text">Category: {{ product.category }}</p>
+            <p class="card-text">Stock: {{ product.stock }}</p>
+            <p class="card-text">Rating: {{ product.rating }}</p>
+            <p class="card-text mt-auto"><small class="text-muted">Last updated {{ product.meta.updatedAt | date:'short' }}</small></p>
+            <!-- <button class="btn btn-secondary mt-3" (click)="openUpdateModal(product)">Update</button> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal for Adding Product -->
+<div class="modal fade" [class.show]="showModal" style="display: block;" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" *ngIf="showModal">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Add Product</h5>
+        <button type="button" class="close" (click)="closeModal()" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="productForm" (ngSubmit)="onAddProduct()">
+          <div class="form-group">
+            <label for="title">Title</label>
+            <input id="title" class="form-control" formControlName="title" placeholder="Product title">
+          </div>
+          <div class="form-group">
+            <label for="description">Description</label>
+            <input id="description" class="form-control" formControlName="description" placeholder="Product description">
+          </div>
+          <div class="form-group">
+            <label for="category">Category</label>
+            <input id="category" class="form-control" formControlName="category" placeholder="Product category">
+          </div>
+          <div class="form-group">
+            <label for="price">Price</label>
+            <input id="price" type="number" class="form-control" formControlName="price" placeholder="Product price">
+          </div>
+          <div class="form-group">
+            <label for="images">Image URL</label>
+            <input id="images" class="form-control" type="file" formControlName="images" placeholder="Product image URL">
+          </div>
+          <button type="submit" class="btn btn-primary" [disabled]="productForm.invalid">Add Product</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal for Updating Product -->
+<div class="modal fade" [class.show]="showUpdateModal" style="display: block;" tabindex="-1" role="dialog" aria-labelledby="updateModalLabel" aria-hidden="true" *ngIf="showUpdateModal">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="updateModalLabel">Update Product</h5>
+        <button type="button" class="close" (click)="closeUpdateModal()" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="updateForm" (ngSubmit)="onUpdateProduct()">
+          <div class="form-group">
+            <label for="updateTitle">Title</label>
+            <input id="updateTitle" class="form-control" formControlName="title" placeholder="Product title">
+          </div>
+          <div class="form-group">
+            <label for="updateDescription">Description</label>
+            <input id="updateDescription" class="form-control" formControlName="description" placeholder="Product description">
+          </div>
+          <div class="form-group">
+            <label for="updateCategory">Category</label>
+            <input id="updateCategory" class="form-control" formControlName="category" placeholder="Product category">
+          </div>
+          <div class="form-group">
+            <label for="updatePrice">Price</label>
+            <input id="updatePrice" type="number" class="form-control" formControlName="price" placeholder="Product price">
+          </div>
+          <div class="form-group">
+            <label for="updateImage">Image URL</label>
+            <input id="updateImage" class="form-control" type="file" formControlName="images" placeholder="Product image URL">
+          </div>
+          <button type="submit" class="btn btn-primary" [disabled]="updateForm.invalid">Update Product</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+

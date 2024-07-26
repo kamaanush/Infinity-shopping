@@ -21,6 +21,7 @@ import { TvhomeComponent } from './tvhome/tvhome.component';
 import { WearableComponent } from './wearable/wearable.component';
 import {HttpClientModule} from '@angular/common/http';
 import { SidenavComponent } from './sidenav/sidenav.component';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -50,6 +51,7 @@ import { SidenavComponent } from './sidenav/sidenav.component';
     AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
+    FormsModule
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]
