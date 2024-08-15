@@ -18,6 +18,9 @@ export class AllproductsComponent {
   selectedProduct: any = null;
   loading: boolean = true;
   error: string = '';
+  currentPage: number = 1;
+  itemsPerPage: number = 10;
+  totalItems: number = 0;
 
   constructor(private productService: ProductService, private fb: FormBuilder) {
     this.productForm = this.fb.group({
@@ -42,17 +45,29 @@ export class AllproductsComponent {
   }
 
   fetchProducts(): void {
-    this.productService.getProducts().subscribe(
-      (data: any) => {
-        this.products = data.products;
-        this.filteredProducts = data.products;
-        this.loading = false;
-      },
-      error => {
-        this.error = 'Error fetching products';
-        this.loading = false;
-      }
-    );
+    const limit = 30;
+    let skip = 0;
+
+    const fetchAll = () => {
+      this.productService.getProducts(limit, skip).subscribe(
+        (data: any) => {
+          if (data.products.length > 0) {
+            this.products = [...this.products, ...data.products];
+            this.filteredProducts = [...this.filteredProducts, ...data.products];
+            skip += limit;
+            fetchAll();
+          } else {
+            this.loading = false;
+          }
+        },
+        error => {
+          this.error = 'Error fetching products';
+          this.loading = false;
+        }
+      );
+    };
+
+    fetchAll();
   }
 
   onSearchChange(searchQuery: string): void {

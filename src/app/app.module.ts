@@ -22,6 +22,9 @@ import { WearableComponent } from './wearable/wearable.component';
 import {HttpClientModule} from '@angular/common/http';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { FormsModule } from '@angular/forms';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { LoginComponent } from './login/login.component';
+import { UserInfoComponent } from './user-info/user-info.component';
 
 
 
@@ -44,6 +47,9 @@ import { FormsModule } from '@angular/forms';
     TvhomeComponent,
     WearableComponent,
     SidenavComponent,
+    DashboardComponent,
+    LoginComponent,
+    UserInfoComponent,
 
   ],
   imports: [

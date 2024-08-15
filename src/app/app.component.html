@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary fixed-top">
+<nav *ngIf="showHeaderFooter" class="navbar navbar-expand-lg navbar-light bg-body-tertiary fixed-top">
   <div class="container-fluid">
       <h2 class="fw-bold">TECHSHED</h2>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -16,8 +16,8 @@
         </form>
       </div>
       <div style="margin-right: 1%;">
-        <a class="btn btn-success" data-bs-toggle="modal" href="#exampleModalToggle" role="button">
-          <i class="bi bi-person-circle me-5"> LOG IN</i>
+        <a class="btn btn-success"  role="button" (click)="navigateToLogin()">
+          <i class="bi bi-person-circle me-5"> LOG-OUT</i>
           <i class="bi bi-heart me-md-5"></i>
           <i class="bi bi-cart"></i>
           &nbsp;
@@ -26,7 +26,7 @@
       </div>
   </div>
 </nav>
-<nav class="navbar navbar-light" style="background-color: rgba(229, 231, 235); margin-top: 56px;">
+<nav *ngIf="showHeaderFooter" class="navbar navbar-light" style="background-color: rgba(229, 231, 235); margin-top: 56px;">
 <div class="container-fluid mt-3">
   <div class="row" style="width:100%">
     <div class="col-1">
@@ -36,7 +36,7 @@
       <p> shop all</p>
     </div>
     <div class="col-1">
-      <p>Computers</p>
+      <p>Best Sellers</p>
     </div>
     <div class="col-1">
       <p>Tablets</p>
@@ -71,19 +71,19 @@
 </div>
 </nav>
 <router-outlet></router-outlet>
-<app-footer></app-footer>
+<app-footer *ngIf="showHeaderFooter"></app-footer>
 
 <!-- Modal login and forgot passoword -->
  
-<div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+<!-- <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
 <div class="modal-dialog modal-dialog-centered">
   <div class="modal-content">
     <div class="modal-header">
       <h5 class="modal-title" id="exampleModalToggleLabel">Sign In</h5>
       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
     </div>
-    <div class="modal-body">
-      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <div class="modal-body"> -->
+      <!-- <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
         <div class="mb-3">
           <label for="username" class="form-label">Username</label>
           <input type="text" class="form-control" id="username" formControlName="username" aria-describedby="usernameHelp">
@@ -97,10 +97,17 @@
           <input type="checkbox" class="form-check-input" id="exampleCheck1">
           <label class="form-check-label" for="exampleCheck1">Check me out</label>
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-      </form>
+        <div class="row">
+          <div class="col-6 d-flex align-items-center">
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </div>
+          <div class="col-6 d-flex justify-content-end align-items-center">
+            <button class="btn btn-primary">Logout</button>
+          </div>
+        </div>              
+      </form> -->
           
-    </div>
+    <!-- </div>
     <div class="modal-footer">
       <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Open to Register</button></div>
   </div>
@@ -110,7 +117,7 @@
 <div class="modal-dialog modal-dialog-centered">
   <div class="modal-content">
     <div class="modal-header">
-      <h5 class="modal-title" id="exampleModalToggleLabel2">Registeration</h5>
+      <h5 class="modal-title" id="exampleModalToggleLabel2">Registration</h5>
       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
     </div>
     <div class="modal-body">
@@ -163,5 +170,5 @@
       <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">Back to Log_in</button>
     </div>
   </div>
-</div>
-</div>
+</div> -->
+<!-- </div> -->

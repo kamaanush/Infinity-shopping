@@ -1,1 +1,30 @@
-<p>computers works!</p>
+<div class="container">
+  <div *ngIf="smartphones.length > 0; else noSmartphones" class="row">
+    <div *ngFor="let smartphone of smartphones" class="col-md-4">
+      <div class="card mb-4">
+        <img class="card-img-top" [src]="smartphone.thumbnail" alt="{{ smartphone.title }}">
+        <div class="card-body">
+          <h5 class="card-title">{{ smartphone.title }}</h5>
+          <p class="card-text">{{ smartphone.description }}</p>
+          <p class="card-text"><strong>Price:</strong> {{ smartphone.price | currency }}</p>
+          <p class="card-text"><strong>Discount:</strong> {{ smartphone.discountPercentage }}%</p>
+          <p class="card-text"><strong>Rating:</strong> {{ smartphone.rating }}</p>
+          <p class="card-text"><strong>Stock:</strong> {{ smartphone.stock }}</p>
+          <p class="card-text"><strong>Brand:</strong> {{ smartphone.brand }}</p>
+          <p class="card-text"><strong>SKU:</strong> {{ smartphone.sku }}</p>
+          <p class="card-text"><strong>Weight:</strong> {{ smartphone.weight }} kg</p>
+          <p class="card-text"><strong>Dimensions:</strong> Width: {{ smartphone.dimensions.width }} cm, Height: {{ smartphone.dimensions.height }} cm, Depth: {{ smartphone.dimensions.depth }} cm</p>
+          <p class="card-text"><strong>Warranty:</strong> {{ smartphone.warrantyInformation }}</p>
+          <p class="card-text"><strong>Shipping Information:</strong> {{ smartphone.shippingInformation }}</p>
+          <p class="card-text"><strong>Availability:</strong> {{ smartphone.availabilityStatus }}</p>
+          <p class="card-text"><strong>Return Policy:</strong> {{ smartphone.returnPolicy }}</p>
+          <p class="card-text"><strong>Minimum Order Quantity:</strong> {{ smartphone.minimumOrderQuantity }}</p>
+          <p class="card-text"><small class="text-muted">Last updated {{ smartphone.meta.updatedAt | date:'short' }}</small></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <ng-template #noSmartphones>
+    <p>No smartphones available.</p>
+  </ng-template>
+</div>
