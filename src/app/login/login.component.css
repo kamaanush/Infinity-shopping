@@ -6,3 +6,14 @@
 .card{
     background-color: #191717;
 }
+/* Add this to styles.css or a specific stylesheet for login */
+
+.login-page {
+    background-image: url('/assets/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh; /* Ensure it covers the viewport height */
+    margin: 0;
+  }
+  
