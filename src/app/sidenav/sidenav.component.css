@@ -1,4 +1,12 @@
 .no-border {
     border: none !important;
   }
-  
+.list-group-item.no-border:hover {
+  background-color: #FFA500;
+  color: white;
+}
+.list-group-item.no-border.active {
+  background-color: #778899 !important;
+  color: white !important;
+  border: none;
+}

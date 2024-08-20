@@ -103,3 +103,67 @@ html, body {
   background-color: #f8d7da;
   align-self: flex-start;
 }
+.category-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 50%;
+  background-color: #f8f9fa;
+  width: 150px;
+  height: 150px;
+  margin: 20px auto;
+}
+
+.category-item img {
+  max-width: 80px;
+  max-height: 80px;
+}
+
+.category-item.sale {
+  background-color: #6c63ff;
+  color: #fff;
+}
+
+.category-item.sale img {
+  filter: invert(1);
+}
+
+.category-item.black-circle {
+  background-color: #000;
+  color: #fff;
+}
+
+.category-item.black-circle img {
+  filter: invert(1);
+}
+
+.category-title {
+  margin-top: 10px;
+  font-weight: 500;
+}
+.chat-modal-dialog {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 300px; /* Adjust the width as needed */
+  margin: 0;
+  z-index: 1055; /* Ensures it appears on top of other content */
+}
+
+.chat-box {
+  height: 300px; /* Adjust the height as needed */
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.messages {
+  height: 200px; /* Adjust the height based on the total height of the chat box */
+  overflow-y: scroll;
+  padding-right: 10px; /* Adjust for scrollbar */
+  margin-bottom: 10px;
+}

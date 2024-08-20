@@ -9,11 +9,15 @@
 /* Add this to styles.css or a specific stylesheet for login */
 
 .login-page {
-    background-image: url('/assets/background.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 100vh; /* Ensure it covers the viewport height */
-    margin: 0;
-  }
-  
+  background-image: url('/assets/background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh; /* Ensure it covers the viewport height */
+  margin: 0;
+}
+button.btn-primary:hover,
+button.btn-secondary:hover {
+  background-color: orange;
+  border-color: orange;
+}

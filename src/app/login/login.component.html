@@ -3,7 +3,9 @@
   <div class="card p-4 shadow rounded-5 rounded-top-0" style="width: 100%; max-width: 400px;">
     <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
       <div class="mb-3">
-        <label for="username" class="form-label text-success">UserName</label>
+        <label for="username" class="form-label text-success" style="font-family: '__Special_Elite_Fallback_07f240', cursive, system-ui, sans-serif;">
+          UserName
+      </label>      
         <input type="text" class="form-control border border-2 border border-success-subtle" id="username" formControlName="username" aria-describedby="usernameHelp">
         <div *ngIf="username?.invalid && (username?.dirty || username?.touched)" class="text-danger">
           <div *ngIf="username?.errors?.['required']">UserName is required.</div>
@@ -11,7 +13,7 @@
         </div>
       </div>
       <div class="mb-3">
-        <label for="exampleInputPassword1" class="form-label text-success">Password</label>
+        <label for="exampleInputPassword1" class="form-label text-success" style="font-family: '__Special_Elite_Fallback_07f240', cursive, system-ui, sans-serif;">Password</label>
         <input type="password" class="form-control border border-2 border border-success-subtle" id="exampleInputPassword1" formControlName="password">
         <div *ngIf="password?.invalid && (password?.dirty || password?.touched)" class="text-danger">
           <div *ngIf="password?.errors?.['required']">Password is required.</div>
