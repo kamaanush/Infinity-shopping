@@ -27,48 +27,49 @@
   </div>
 </nav>
 <nav *ngIf="showHeaderFooter" class="navbar navbar-light" style="background-color: rgba(229, 231, 235); margin-top: 56px;">
-<div class="container-fluid mt-3">
-  <div class="row" style="width:100%">
-    <div class="col-1">
-      <app-sidenav></app-sidenav>
-    </div>
-    <div class="col-1">
-      <p routerLink="/home-component" routerLinkActive="active"> Home</p>
-    </div>
-    <div class="col-1">
-      <p routerLink="/all-products" routerLinkActive="active">All-Products</p>
-    </div>
-    <div class="col-1">
-      <p routerLink="/best-sellers" routerLinkActive="active">Best-sellers</p>
-    </div>
-    <div class="col-2">
-      <p routerLink="/computers" routerLinkActive="active">Smart-phones</p>
-    </div>
-    <div class="col-1">
-      <div class="dropdown">
-        <p class="dropdown-toggle">
-          Audio
-        </p>
-        <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="#">HeadPhones</a></li>
-          <li><a class="dropdown-item" href="#">Speakers</a></li>
-        </ul>
+  <div class="container-fluid mt-3">
+    <div class="row" style="width: 100%;">
+      <div class="col-12 col-md-2 col-lg-1">
+        <app-sidenav></app-sidenav>
+      </div>
+      <div class="col-12 col-md-2 col-lg-1">
+        <p routerLink="/home-component" routerLinkActive="active">Home</p>
+      </div>
+      <div class="col-12 col-md-2 col-lg-1">
+        <p routerLink="/all-products" routerLinkActive="active">All-Products</p>
+      </div>
+      <div class="col-12 col-md-2 col-lg-1">
+        <p routerLink="/best-sellers" routerLinkActive="active">Best-sellers</p>
+      </div>
+      <div class="col-12 col-md-4 col-lg-2">
+        <p routerLink="/computers" routerLinkActive="active">Smart-phones</p>
+      </div>
+      <div class="col-12 col-md-4 col-lg-1">
+        <div class="dropdown">
+          <p class="dropdown-toggle" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+            Audio
+          </p>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <li><a class="dropdown-item" href="#">HeadPhones</a></li>
+            <li><a class="dropdown-item" href="#">Speakers</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-12 col-md-4 col-lg-1">
+        <p>Mobile</p>
+      </div>
+      <div class="col-12 col-md-4 col-lg-2">
+        <p>T.V & Homecinema</p>
+      </div>
+      <div class="col-12 col-md-4 col-lg-1">
+        <p>WearableTech</p>
+      </div>
+      <div class="col-12 col-md-4 col-lg-1">
+        <p>Sale</p>
       </div>
     </div>
-    <div class="col-1">
-      <p>Mobile</p>
-    </div>
-    <div class="col-2">
-      <p>T.V & Homecinema</p>
-    </div>
-    <div class="col-1">
-      <p>WearableTech</p>
-    </div>
-    <div class="col-1">
-      <p>Sale</p>
-    </div>
   </div>
-</div>
+  
 </nav>
 <router-outlet></router-outlet>
 <app-footer *ngIf="showHeaderFooter"></app-footer>

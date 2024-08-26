@@ -19,26 +19,7 @@
   height: 100%;
   object-fit: cover;
 }
-/* .curved-image-wrapper {
-  position: relative;
-  width: 100%;
-  height: 50%;
-  overflow: hidden;
-}
-.curved-image {
-  width: 100%;
-  height: 100%;
-  border-top-right-radius: 50% 100%;
-  border-bottom-right-radius: 50% 100%;
-  object-fit: cover;
-} */
-/* .custom-row {
-  padding: 10px; 
-}
 
-.custom-col {
-  padding: 10px; 
-} */
 
 .custom-image {
   max-height: 500px;
@@ -147,13 +128,13 @@ html, body {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  width: 300px; /* Adjust the width as needed */
+  width: 300px; 
   margin: 0;
-  z-index: 1055; /* Ensures it appears on top of other content */
+  z-index: 1055; 
 }
 
 .chat-box {
-  height: 300px; /* Adjust the height as needed */
+  height: 300px; 
   overflow-y: auto;
   border: 1px solid #ddd;
   padding: 10px;
@@ -162,8 +143,14 @@ html, body {
 }
 
 .messages {
-  height: 200px; /* Adjust the height based on the total height of the chat box */
+  height: 200px; 
   overflow-y: scroll;
-  padding-right: 10px; /* Adjust for scrollbar */
+  padding-right: 10px; 
   margin-bottom: 10px;
+}
+.overflow-hidden {
+  overflow: hidden;
+}
+.text-bg-danger {
+  display: inline-block; 
 }
