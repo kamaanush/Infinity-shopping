@@ -25,6 +25,7 @@ import { FormsModule } from '@angular/forms';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { LoginComponent } from './login/login.component';
 import { UserInfoComponent } from './user-info/user-info.component';
+import { BagComponent } from './bag/bag.component';
 
 
 
@@ -50,6 +51,7 @@ import { UserInfoComponent } from './user-info/user-info.component';
     DashboardComponent,
     LoginComponent,
     UserInfoComponent,
+    BagComponent,
 
   ],
   imports: [

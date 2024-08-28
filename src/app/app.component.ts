@@ -47,4 +47,7 @@ export class AppComponent {
   navigateToLogin() {
     this.router.navigate(['/login']);
   }
+  goToBag() {
+    this.router.navigate(['/bag']);
+  }
 }

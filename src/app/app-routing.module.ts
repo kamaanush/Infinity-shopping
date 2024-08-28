@@ -17,6 +17,7 @@ import { WearableComponent } from './wearable/wearable.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { LoginComponent } from './login/login.component';
 import { UserInfoComponent } from './user-info/user-info.component';
+import { BagComponent } from './bag/bag.component';
 
 const routes: Routes = [
   // { path: '', redirectTo: '/home-component', pathMatch: 'full' } ,
@@ -38,6 +39,7 @@ const routes: Routes = [
   { path: 'wearable', component: WearableComponent },
   { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: 'user-info', component: UserInfoComponent },
+  { path: 'bag', component: BagComponent },
  
 
 
