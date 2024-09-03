@@ -8,6 +8,7 @@ import { ProductService } from '../product.service';
 })
 export class BestsellersComponent {
   bestSellers: any[] = [];
+  loading: boolean = true;
 
   constructor(private productService: ProductService) { }
 
@@ -15,10 +16,12 @@ export class BestsellersComponent {
     this.productService.getBestSellers().subscribe(
       (data: any) => {
         this.bestSellers = data.products;
+        this.loading = false;// Set loading to false once data is fetched
         console.log(this.bestSellers);
       },
       error => {
         console.error('Error fetching best sellers', error);
+        this.loading = false;  // Also set loading to false in case of an error
       }
     );
   }

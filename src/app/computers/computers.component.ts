@@ -9,6 +9,8 @@ import { ProductService } from '../product.service';
 export class ComputersComponent {
   smartphones: any[] = []; // This will store the smartphones data
 
+  loading: boolean = true;  // Initialize loading state
+
   constructor(private productService: ProductService) { }
 
   ngOnInit(): void {
@@ -27,8 +29,12 @@ export class ComputersComponent {
         } else {
           console.error('Invalid API response format');
         }
+        this.loading = false;  // Stop loading when data is fetched
       },
-      error => console.error('Error fetching smartphones:', error)
+      error => {
+        console.error('Error fetching smartphones:', error);
+        this.loading = false;  // Stop loading on error
+      }
     );
   }
 }

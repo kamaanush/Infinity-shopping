@@ -1,6 +1,13 @@
 <div class="container">
   <h2>Smart-phones</h2>
-  <div *ngIf="smartphones.length > 0; else noSmartphones" class="row">
+
+  <div *ngIf="loading" class="d-flex justify-content-center my-4">
+    <div class="spinner-grow" style="width: 3rem; height: 3rem;" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+  </div>
+
+ <div *ngIf="!loading && smartphones.length > 0; else noSmartphones" class="row">
     <div *ngFor="let smartphone of smartphones" class="col-md-4">
       <div class="card mb-4">
         <img class="card-img-top" [src]="smartphone.thumbnail" alt="{{ smartphone.title }}">
@@ -26,6 +33,6 @@
     </div>
   </div>
   <ng-template #noSmartphones>
-    <p>No smartphones available.</p>
+    <!-- <p>No smartphones available.</p> -->
   </ng-template>
 </div>

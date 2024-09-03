@@ -2,7 +2,7 @@
   <div class="container-fluid">
       <!-- <h2 class="fw-bold">Ꝁ𝝙Ꝁ</h2> -->
       <figure style="height: 40px;">
-        <img class="" src="../assets/Mask group.svg" atl="Logo" style="width: 50px;height: 50px;">
+        <img class="" routerLink="/home-component" src="../assets/Mask group.svg" atl="Logo" style="width: 50px;height: 50px;cursor: pointer;">
       </figure>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -10,16 +10,17 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <form class="d-flex ms-5" role="search">
-          <div class="input-group">
-            <input type="text" class="form-control me-2 rounded-pill f2 custom-search-input" placeholder="Search....."
-              aria-label="Search">
-            <!-- <button class="btn btn-outline-secondary rounded-pill f1" type="button" id="button-addon2"><i
-                class="bi bi-search"></i></button> -->
+          <div class="position-relative">
+            <input type="text" class="form-control me-2 rounded-pill f2 custom-search-input" 
+                   placeholder="Search..... " aria-label="Search" style="padding-left: 10px;">
+            <i class="bi bi-search position-absolute" 
+               style="left: 180px; top: 50%; transform: translateY(-50%); color: gray;"></i>
           </div>
+          
         </form>
       </div>
       <div style="margin-right: 1%;">
-        <a class="btn btn-success"  role="button" (click)="navigateToLogin()">
+        <a class="btn bg-black text-white"  role="button" (click)="navigateToLogin()">
           <i class="bi bi-person-circle me-5"> LOG-OUT</i>
           <!-- <i class="bi bi-cart"></i>
           &nbsp;
@@ -31,14 +32,15 @@
   </div>
 </nav>
 <nav *ngIf="showHeaderFooter" class="navbar navbar-light" style="background-color: rgba(229, 231, 235); margin-top: 56px;">
+  <!-- position: sticky; top: 56px; z-index: 999; -->
   <div class="container-fluid mt-3">
     <div class="row" style="width: 100%;">
       <div class="col-12 col-md-2 col-lg-1">
         <app-sidenav></app-sidenav>
       </div>
-      <div class="col-12 col-md-2 col-lg-1">
+      <!-- <div class="col-12 col-md-2 col-lg-1">
         <p routerLink="/home-component" routerLinkActive="active">Home</p>
-      </div>
+      </div> -->
       <div class="col-12 col-md-2 col-lg-1">
         <p routerLink="/all-products" routerLinkActive="active">All-Products</p>
       </div>
@@ -65,7 +67,7 @@
       <div class="col-12 col-md-4 col-lg-2">
         <p>T.V & Homecinema</p>
       </div>
-      <div class="col-12 col-md-4 col-lg-1">
+      <div class="col-12 col-md-4 col-lg-2">
         <p>WearableTech</p>
       </div>
       <div class="col-12 col-md-4 col-lg-1">

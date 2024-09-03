@@ -2,7 +2,7 @@
     border: none !important;
   }
 .list-group-item.no-border:hover {
-  background-color: #198754;
+  background-color: black;
   color: white;
 }
 .list-group-item.no-border.active {
