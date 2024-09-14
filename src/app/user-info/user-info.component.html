@@ -1,41 +1,50 @@
 <div *ngIf="user">
-    <h1>User Information</h1>
-    <table class="table table-bordered">
-      <thead>
-        <tr>
-          <th>Field</th>
-          <th>Value</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Username</td>
-          <td>{{ user.username }}</td>
-        </tr>
-        <tr>
-          <td>Email</td>
-          <td>{{ user.email }}</td>
-        </tr>
-        <tr>
-          <td>First Name</td>
-          <td>{{ user.firstName }}</td>
-        </tr>
-        <tr>
-          <td>Last Name</td>
-          <td>{{ user.lastName }}</td>
-        </tr>
-        <tr>
-          <td>Gender</td>
-          <td>{{ user.gender }}</td>
-        </tr>
-        <tr>
-          <td>Image</td>
-          <td><img [src]="user.image" alt="User Image" class="img-thumbnail"></td>
-        </tr>
-      </tbody>
-    </table>
+  <h1>User Information</h1>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Field</th>
+        <th>Value</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Username</td>
+        <td>{{ user.username }}</td>
+      </tr>
+      <tr>
+        <td>Email</td>
+        <td>{{ user.email }}</td>
+      </tr>
+      <tr>
+        <td>First Name</td>
+        <td>{{ user.firstName }}</td>
+      </tr>
+      <tr>
+        <td>Last Name</td>
+        <td>{{ user.lastName }}</td>
+      </tr>
+      <tr>
+        <td>Gender</td>
+        <td>{{ user.gender }}</td>
+      </tr>
+      <tr>
+        <td>Image</td>
+        <td><img [src]="user.image" alt="User Image" class="img-thumbnail"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<!-- <div *ngIf="!user">
+  <p>Loading user information...</p>
+</div> -->
+
+
+<!-- SPINNER -->
+
+<!-- Display spinner while loading -->
+<div *ngIf="!user" class="d-flex justify-content-center align-items-center" style="height: 100vh;">
+  <div class="spinner-grow" style="width: 3rem; height: 3rem;" role="status">
+    <span class="visually-hidden">Loading...</span>
   </div>
-  <div *ngIf="!user">
-    <p>Loading user information...</p>
-  </div>
-  
+</div>

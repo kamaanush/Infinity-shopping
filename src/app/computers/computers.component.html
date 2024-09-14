@@ -9,7 +9,7 @@
 
  <div *ngIf="!loading && smartphones.length > 0; else noSmartphones" class="row">
     <div *ngFor="let smartphone of smartphones" class="col-md-4">
-      <div class="card mb-4">
+      <div class="card mb-4 card">
         <img class="card-img-top" [src]="smartphone.thumbnail" alt="{{ smartphone.title }}">
         <div class="card-body">
           <h5 class="card-title">{{ smartphone.title }}</h5>

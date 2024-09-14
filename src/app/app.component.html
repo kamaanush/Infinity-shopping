@@ -28,7 +28,12 @@
         </a>
       </div>
       <i class="bi bi-heart me-md-2"></i>
-      <i class="bi bi-bag me-md-2 mb-1" (click)="goToBag()"></i>
+      <i class="bi bi-bag me-md-2 mb-1" 
+      (click)="goToBag()" 
+      data-bs-toggle="tooltip" 
+      data-bs-placement="bottom" 
+      data-bs-title="Tooltip on bottom"></i>
+   
   </div>
 </nav>
 <nav *ngIf="showHeaderFooter" class="navbar navbar-light" style="background-color: rgba(229, 231, 235); margin-top: 56px;">

@@ -4,3 +4,9 @@
   .card-img-top:hover {
     transform: scale(1.1); /* Zoom in effect */
   }
+  .card {
+    /* width: 250px; */
+    padding: 16px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px gray;
+  }
