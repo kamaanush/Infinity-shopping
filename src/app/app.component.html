@@ -1,92 +1,171 @@
 <nav *ngIf="showHeaderFooter" class="navbar navbar-expand-lg navbar-light bg-body-tertiary fixed-top">
   <div class="container-fluid">
-      <!-- <h2 class="fw-bold">Ꝁ𝝙Ꝁ</h2> -->
-      <figure style="height: 40px;">
-        <img class="" routerLink="/home-component" src="../assets/Mask group.svg" atl="Logo" style="width: 50px;height: 50px;cursor: pointer;">
-      </figure>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <form class="d-flex ms-5" role="search">
-          <div class="position-relative">
-            <input type="text" class="form-control me-2 rounded-pill f2 custom-search-input" 
-                   placeholder="Search..... " aria-label="Search" style="padding-left: 10px;">
-            <i class="bi bi-search position-absolute" 
-               style="left: 180px; top: 50%; transform: translateY(-50%); color: gray;"></i>
-          </div>
-          
-        </form>
-      </div>
-      <div style="margin-right: 1%;">
-        <a class="btn bg-black text-white"  role="button" (click)="navigateToLogin()">
-          <i class="bi bi-person-circle me-5"> LOG-OUT</i>
-          <!-- <i class="bi bi-cart"></i>
+    <!-- <h2 class="fw-bold">Ꝁ𝝙Ꝁ</h2> -->
+    <figure style="height: 40px;">
+      <img class="" routerLink="/home-component" src="../assets/Mask group.svg" atl="Logo"
+        style="width: 50px;height: 50px;cursor: pointer;">
+    </figure>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <form class="d-flex ms-5" role="search">
+        <div class="position-relative">
+          <input type="text" class="form-control me-2 rounded-pill f2 custom-search-input" placeholder="Search..... "
+            aria-label="Search" style="padding-left: 10px;">
+          <i class="bi bi-search position-absolute"
+            style="left: 180px; top: 50%; transform: translateY(-50%); color: gray;"></i>
+        </div>
+
+      </form>
+    </div>
+    <div style="margin-right: 1%;">
+      <a class="btn bg-black text-white" role="button" (click)="navigateToLogin()">
+        <i class="bi bi-person-circle me-5"> LOG-OUT</i>
+        <!-- <i class="bi bi-cart"></i>
           &nbsp;
           <i class="bi bi-0-circle-fill"></i> -->
-        </a>
-      </div>
-      <i class="bi bi-heart me-md-2"></i>
-      <i class="bi bi-bag me-md-2 mb-1" 
-      (click)="goToBag()" 
-      data-bs-toggle="tooltip" 
-      data-bs-placement="bottom" 
+      </a>
+    </div>
+    <!-- <i class="bi bi-heart me-md-2"></i> -->
+    <i class="bi bi-heart-fill me-md-2"></i>
+    <i class="bi bi-bag me-md-2 mb-1" (click)="goToBag()" data-bs-toggle="tooltip" data-bs-placement="bottom"
       data-bs-title="Tooltip on bottom"></i>
-   
+
   </div>
 </nav>
-<nav *ngIf="showHeaderFooter" class="navbar navbar-light" style="background-color: rgba(229, 231, 235); margin-top: 56px;">
+<nav *ngIf="showHeaderFooter" class="navbar navbar-light"
+  style="background-color: rgba(229, 231, 235); margin-top: 56px;">
   <!-- position: sticky; top: 56px; z-index: 999; -->
-  <div class="container-fluid mt-3">
+  <div class="container-fluid mt-4">
     <div class="row" style="width: 100%;">
       <div class="col-12 col-md-2 col-lg-1">
         <app-sidenav></app-sidenav>
       </div>
-      <!-- <div class="col-12 col-md-2 col-lg-1">
-        <p routerLink="/home-component" routerLinkActive="active">Home</p>
-      </div> -->
-      <div class="col-12 col-md-2 col-lg-1">
-        <p routerLink="/all-products" routerLinkActive="active">All-Products</p>
-      </div>
-      <div class="col-12 col-md-2 col-lg-1">
-        <p routerLink="/best-sellers" routerLinkActive="active">Best-sellers</p>
-      </div>
-      <div class="col-12 col-md-4 col-lg-2">
-        <p routerLink="/computers" routerLinkActive="active">Smart-phones</p>
-      </div>
-      <div class="col-12 col-md-4 col-lg-1">
-        <div class="dropdown">
-          <p class="dropdown-toggle" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-            Audio
-          </p>
-          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <li><a class="dropdown-item" href="#">HeadPhones</a></li>
-            <li><a class="dropdown-item" href="#">Speakers</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="col-12 col-md-4 col-lg-1">
-        <p>Mobile</p>
-      </div>
-      <div class="col-12 col-md-4 col-lg-2">
-        <p>T.V & Homecinema</p>
-      </div>
-      <div class="col-12 col-md-4 col-lg-2">
-        <p>WearableTech</p>
-      </div>
-      <div class="col-12 col-md-4 col-lg-1">
-        <p>Sale</p>
+
+      <div class="col-12 col-md-10 col-lg-11">
+        <ul class="nav">
+          <li class="nav-item col-12 col-md-2 col-lg-2">
+            <!-- <a routerLink="/all-products" routerLinkActive="active" class="nav-link">All Products</a> -->
+            <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop"
+              aria-controls="offcanvasTop">New & Featured</button>
+
+            <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+              <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasTopLabel">Offcanvas top</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              </div>
+              <div class="offcanvas-body">
+                <div class="container">
+                  <div class="row justify-content-center">
+                    <!-- New & Featured Column -->
+                    <div class="col-md-2">
+                      <h5>New & Featured</h5>
+                      <ul class="list-unstyled">
+                        <li><a href="#">New Arrivals</a></li>
+                        <li><a href="#">Latest Shoes</a></li>
+                        <li><a href="#">Latest Clothing</a></li>
+                        <li><a href="#">SNKRS Launch Calendar</a></li>
+                        <li><a href="#">Get ‘Em in SNKRS</a></li>
+                        <li><a href="#">Customize with Nike By You</a></li>
+                        <li><a href="#">Bestsellers</a></li>
+                        <li><a href="#">Member Exclusive</a></li>
+                        <li><a href="#">Top Kicks Under ₹ 8,000.00</a></li>
+                      </ul>
+                    </div>
+
+                    <!-- Shop Icons Column -->
+                    <div class="col-md-2">
+                      <h5>Shop Icons</h5>
+                      <ul class="list-unstyled">
+                        <li><a href="#">Air Force 1</a></li>
+                        <li><a href="#">Air Jordan 1</a></li>
+                        <li><a href="#">Air Max</a></li>
+                        <li><a href="#">Dunk</a></li>
+                        <li><a href="#">Cortez</a></li>
+                        <li><a href="#">Blazer</a></li>
+                        <li><a href="#">Pegasus</a></li>
+                      </ul>
+                    </div>
+
+                    <!-- New For Men Column -->
+                    <div class="col-md-2">
+                      <h5>New For Men</h5>
+                      <ul class="list-unstyled">
+                        <li><a href="#">Shoes</a></li>
+                        <li><a href="#">Clothing</a></li>
+                        <li><a href="#">Accessories</a></li>
+                        <li><a href="#">Shop All New</a></li>
+                      </ul>
+                    </div>
+
+                    <!-- New For Women Column -->
+                    <div class="col-md-2">
+                      <h5>New For Women</h5>
+                      <ul class="list-unstyled">
+                        <li><a href="#">Shoes</a></li>
+                        <li><a href="#">Clothing</a></li>
+                        <li><a href="#">Accessories</a></li>
+                        <li><a href="#">Shop All New</a></li>
+                      </ul>
+                    </div>
+
+                    <!-- New For Kids Column -->
+                    <div class="col-md-2">
+                      <h5>New For Kids</h5>
+                      <ul class="list-unstyled">
+                        <li><a href="#">Shoes</a></li>
+                        <li><a href="#">Clothing</a></li>
+                        <li><a href="#">Accessories</a></li>
+                        <li><a href="#">Shop All New</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </li>
+          <li class="nav-item col-12 col-md-2 col-lg-2">
+            <a routerLink="/best-sellers" routerLinkActive="active" class="nav-link">Best Sellers</a>
+          </li>
+          <li class="nav-item col-12 col-md-4 col-lg-2">
+            <a routerLink="/computers" routerLinkActive="active" class="nav-link">Smart Phones</a>
+          </li>
+          <li class="nav-item col-12 col-md-4 col-lg-1">
+            <div class="dropdown">
+              <a class="nav-link dropdown-toggle" id="dropdownMenuButton" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Audio
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <li><a class="dropdown-item" href="#">HeadPhones</a></li>
+                <li><a class="dropdown-item" href="#">Speakers</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item col-12 col-md-4 col-lg-1">
+            <a class="nav-link">Mobile</a>
+          </li>
+          <li class="nav-item col-12 col-md-4 col-lg-2">
+            <a class="nav-link">T.V & Home Cinema</a>
+          </li>
+          <li class="nav-item col-12 col-md-4 col-lg-1">
+            <a class="nav-link">Sale</a>
+          </li>
+        </ul>
       </div>
     </div>
   </div>
-  
+
+
 </nav>
 <router-outlet></router-outlet>
 <app-footer *ngIf="showHeaderFooter"></app-footer>
 
 <!-- Modal login and forgot passoword -->
- 
+
 <!-- <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
 <div class="modal-dialog modal-dialog-centered">
   <div class="modal-content">
@@ -95,7 +174,7 @@
       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
     </div>
     <div class="modal-body"> -->
-      <!-- <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+<!-- <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
         <div class="mb-3">
           <label for="username" class="form-label">Username</label>
           <input type="text" class="form-control" id="username" formControlName="username" aria-describedby="usernameHelp">
@@ -118,8 +197,8 @@
           </div>
         </div>              
       </form> -->
-          
-    <!-- </div>
+
+<!-- </div>
     <div class="modal-footer">
       <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Open to Register</button></div>
   </div>

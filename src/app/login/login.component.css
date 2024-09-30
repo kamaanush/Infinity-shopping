@@ -1,23 +1,23 @@
 .btn{
-    background-color: #405D72;
-    color: whitesmoke;
+  background-color: #405D72;
+  color: whitesmoke;
 }
 
 .card{
-    background-color: #191717;
+  background-color: #191717;
 }
 /* Add this to styles.css or a specific stylesheet for login */
 
 .login-page {
-  background-image: url('/assets/background.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 100vh; /* Ensure it covers the viewport height */
-  margin: 0;
+background-image: url('/assets/background.jpg');
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+height: 100vh; /* Ensure it covers the viewport height */
+margin: 0;
 }
 button.btn-primary:hover,
 button.btn-secondary:hover {
-  background-color: orange;
-  border-color: orange;
+background-color: orange;
+border-color: orange;
 }

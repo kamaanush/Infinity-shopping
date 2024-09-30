@@ -1,38 +1,73 @@
 .f2 {
-    background-color:darkgray;
-  }
-  
-  .f2:hover {
-    background-color: whitesmoke;
-  }
+  background-color:darkgray;
+}
 
-  .f1{
-    background-color:grey;
-  }
-  .f1:hover{
-    background-color:black;
-  }
-  .dropdown {
-    position: relative;
-    display: inline-block;
-  }
-  .dropdown-menu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    z-index: 1000;
-  }
-  .dropdown:hover .dropdown-menu {
-    display: block;
-  }
-  .dropdown-menu li {
-    padding: 0.5rem 1rem;
-  }
-  .dropdown-menu li:hover {
-    background-color: #f8f9fa; 
-  }
-  .dropdown p {
-    cursor: pointer;
-  }
-  
+.f2:hover {
+  background-color: whitesmoke;
+}
+
+.f1{
+  background-color:grey;
+}
+.f1:hover{
+  background-color:black;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+}
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+.dropdown-menu li {
+  padding: 0.5rem 1rem;
+}
+.dropdown-menu li:hover {
+  background-color: #f8f9fa; 
+}
+.dropdown p {
+  cursor: pointer;
+}
+.nav-link {
+  color: black !important; /* Ensure the text is blue */
+}
+
+.nav-link:hover {
+  color: black; /* Optionally, you can add a hover effect */
+}
+.btn:focus {
+  outline: none; /* Removes the default outline on focus */
+  box-shadow: none; /* Removes any shadow if applicable */
+  border: none; /* Removes any border */
+}
+.offcanvas {
+height: 50vh; /* Adjust height to 80% of the viewport height */
+max-height: 100%; /* Prevents overflow */
+}
+
+h5 {
+font-weight: bold;
+}
+
+ul {
+padding-left: 0;
+}
+
+a {
+color: #000;
+text-decoration: none;
+}
+
+a:hover {
+color: #ff6600;
+text-decoration: underline;
+}
+
+
